@@ -34,3 +34,7 @@ int _islower(int c);
 int _isalpha(int c);
 #endif
 
+#ifndef _print_sign_h
+#define _print_sign_h
+int print_sign(int n);
+#endif
