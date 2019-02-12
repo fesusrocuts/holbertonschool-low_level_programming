@@ -1,17 +1,17 @@
 #include "holberton.h"
 /**
- * print_alphabet_x10 - print 10 times the alphabet
- *
+ * print_alphabet_x10 - writes the alphabet with _putchar 10 times
  * Return: void
  */
 void print_alphabet_x10(void)
 {
-	int a;
-
-	a = 0;
-	while (a < 10)
-	{
-		print_alphabet();
-		a++;
+	int i,j;
+	
+	for (j = 0; j < 10; j++){
+		for (i = 'a'; i <= 'z'; i++)
+		{
+			_putchar(i);
+		}
+		_putchar(10);
 	}
 }
