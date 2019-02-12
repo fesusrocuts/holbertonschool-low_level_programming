@@ -23,3 +23,8 @@ void print_alphabet(void);
 void print_alphabet_x10(void);
 
 #endif
+
+#ifndef _islower_h
+#define _islower_h
+int _islower(int c);
+#endif
