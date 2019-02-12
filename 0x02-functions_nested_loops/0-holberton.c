@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - entry, print Holberton, without use
+ * main - entry, print Holberton, without use putchar, printf, puts, etc
  * Return: 0
  */
 int main(void)
