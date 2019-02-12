@@ -17,3 +17,9 @@ int _putchar(char c);
 void print_alphabet(void);
 
 #endif
+#ifndef _print_alphabet_x10_h
+#define _print_alphabet_x10_h
+
+void print_alphabet_x10(void);
+
+#endif
