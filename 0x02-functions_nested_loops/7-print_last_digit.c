@@ -1,6 +1,5 @@
 #include "holberton.h"
-#include <string.h>
-#include <stdlib.h>
+
 /**
  * print_last_digit - print last digit of a number
  * @i: get number integer
@@ -8,13 +7,8 @@
  */
 int print_last_digit(int i)
 {
-	char s[20];
-	int a;
-	
-	sprintf(s, "%d", i);
-	return (s[strlen(s)-1]);
-}
-void main(void)
-{
-	print_last_digit(67884);
+	i = i<0 ? i*-1 : i; 
+	i = (i%10);
+	_putchar(i+48);
+	return (i);
 }
