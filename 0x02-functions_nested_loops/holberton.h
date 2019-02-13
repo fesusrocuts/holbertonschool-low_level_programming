@@ -41,3 +41,9 @@ int print_last_digit(int);
 #define _jack_bauer_h
 void jack_bauer(void);
 #endif
+
+
+#ifndef _add_h
+#define _add_h
+int add(int, int);
+#endif
