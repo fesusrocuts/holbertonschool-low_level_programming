@@ -15,12 +15,12 @@ void jack_bauer(void)
 		h = (c - (dig1 + dig2 * 10)) / 60;
 		dig3 = h % 10;
 		dig4 = (h - (h % 10)) / 10;
-		putchar(dig4 + '0');
-		putchar(dig3 + '0');
-		putchar(58);
-		putchar(dig2 + '0');
-		putchar(dig1 + '0');
-		putchar(10);
+		_putchar(dig4 + '0');
+		_putchar(dig3 + '0');
+		_putchar(58);
+		_putchar(dig2 + '0');
+		_putchar(dig1 + '0');
+		_putchar(10);
 		c++;
 	}
 }
