@@ -6,9 +6,14 @@
  */
 void jack_bauer(void)
 {
-	int c, h, dig1, dig2, dig3, dig4 = 0;
+	int c = 0;
+	int h = 0;
+	int dig1 = 0;
+	int dig2 = 0;
+	int dig3 = 0;
+	int dig4 = 0;
 
-	while (c < 60 * 24)
+	while (c < (60 * 24))
 	{
 		dig1 = c % 10;
 		dig2 = ((c - dig1) % 60) / 10;
