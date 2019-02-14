@@ -87,3 +87,8 @@ void more_numbers(void);
 #define _print_line_h
 void print_line(int n);
 #endif
+
+#ifndef _print_diagonal_h
+#define _print_diagonal_h
+void print_diagonal(int n);
+#endif
