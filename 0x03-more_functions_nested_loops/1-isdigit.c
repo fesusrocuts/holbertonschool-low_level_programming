@@ -11,9 +11,10 @@ int _isdigit(int c)
 	int d = 48;
 
 	while (d <= 57)
+	{
 		if (c == d)
 			return (1);
-		else
-			d++;
+		d++;
+	}
 	return (0);
 }

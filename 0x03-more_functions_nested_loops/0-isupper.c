@@ -11,9 +11,10 @@ int _isupper(int c)
 	char U = 'A';
 
 	while (U < 'Z')
+	{
 		if (c == U)
 			return (1);
-		else
-			U++;
+		U++;
+	}
 	return (0);
 }
