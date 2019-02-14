@@ -14,7 +14,7 @@ int main(void)
 	int c1 = 3;
 	int c2 = 5;
 
-	while (i < lim)
+	while (i <= lim)
 	{
 		if ((i % c1) == 0 || (i % c2) == 0)
 		{
@@ -27,7 +27,7 @@ int main(void)
 		{
 			printf("%d", i);
 		}
-		if (i < (lim - 1))
+		if (i < lim)
 			printf(" ");
 		i++;
 	}
