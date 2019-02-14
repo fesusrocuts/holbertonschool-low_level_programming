@@ -57,3 +57,8 @@ void print_to_98(int n);
 #define __isupper_h
 int _isupper(int c);
 #endif
+
+#ifndef __isdigit_h
+#define __isdigit_h
+int _isdigit(int c);
+#endif
