@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdio.h>
 /**
  * main - return serie fibonacci until number 50
@@ -7,14 +6,18 @@
  */
 int main(void)
 {
-	unsigned long long int a = 1, b = 2;
-	int c = 0;
+	long int tmp = 0;
+	long int a = 0;
+	long int b = 1;
+	int c = 1;
 
-	while (c < 50)
+	while (c <= 50)
 	{
-		printf("%llu, %llu\n", a, b);
+		tmp = a;
+		a = b;
+		b += tmp;
+		printf(c < 50 ? "%ld, " : "%ld\n", b);
 		c++;
-		a += b;
-		b = a + b;
 	}
+	return (0);
 }

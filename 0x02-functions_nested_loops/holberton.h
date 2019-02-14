@@ -47,3 +47,8 @@ void jack_bauer(void);
 #define _add_h
 int add(int, int);
 #endif
+
+#ifndef _print_to_98_h
+#define _print_to_98_h
+void print_to_98(int n);
+#endif
