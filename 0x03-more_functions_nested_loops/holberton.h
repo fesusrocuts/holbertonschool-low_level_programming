@@ -77,3 +77,8 @@ void print_numbers(void);
 #define _print_most_numbers_h
 void print_most_numbers(void);
 #endif
+
+#ifndef _more_numbers_h
+#define _more_numbers_h
+void more_numbers(void);
+#endif
