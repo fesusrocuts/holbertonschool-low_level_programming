@@ -82,3 +82,8 @@ void print_most_numbers(void);
 #define _more_numbers_h
 void more_numbers(void);
 #endif
+
+#ifndef _print_line_h
+#define _print_line_h
+void print_line(int n);
+#endif
