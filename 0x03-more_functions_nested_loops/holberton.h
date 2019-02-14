@@ -62,3 +62,8 @@ int _isupper(int c);
 #define __isdigit_h
 int _isdigit(int c);
 #endif
+
+#ifndef _mul_h
+#define _mul_h
+int mul(int a, int b);
+#endif
