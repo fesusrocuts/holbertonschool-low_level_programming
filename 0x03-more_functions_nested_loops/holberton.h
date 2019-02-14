@@ -67,3 +67,8 @@ int _isdigit(int c);
 #define _mul_h
 int mul(int a, int b);
 #endif
+
+#ifndef _print_numbers_h
+#define _print_numbers_h
+void print_numbers(void);
+#endif
