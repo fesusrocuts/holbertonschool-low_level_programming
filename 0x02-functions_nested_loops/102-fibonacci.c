@@ -16,9 +16,8 @@ int main(void)
 		tmp = a;
 		a = b;
 		b += tmp;
-		printf(c < 50 ? "%ld, " : "%ld", b);
+		printf(c < 50 ? "%ld, " : "%ld\n", b);
 		c++;
 	}
-	printf("\n");
 	return (0);
 }
