@@ -48,8 +48,12 @@ void jack_bauer(void);
 int add(int, int);
 #endif
 
+#ifndef _print_to_98_h
+#define _print_to_98_h
+void print_to_98(int n);
+#endif
 
-#ifndef _isupper_h
-#define _isupper_h
+#ifndef __isupper_h
+#define __isupper_h
 int _isupper(int c);
 #endif
