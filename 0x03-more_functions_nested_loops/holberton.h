@@ -72,3 +72,8 @@ int mul(int a, int b);
 #define _print_numbers_h
 void print_numbers(void);
 #endif
+
+#ifndef _print_most_numbers_h
+#define _print_most_numbers_h
+void print_most_numbers(void);
+#endif
