@@ -7,14 +7,18 @@
  */
 int main(void)
 {
-	unsigned long long int a = 1, b = 2;
+	long long int a = 1, b = 2;
 	int c = 0;
 
-	while (c < 50)
+	while (c < 25)
 	{
-		printf("%llu, %llu\n", a, b);
+		if (c != 24)
+			printf("%llu, %llu, ", a, b);
+		else
+			printf("%llu, %llu\n", a, b);
 		c++;
 		a += b;
 		b = a + b;
 	}
+	return (0);
 }
