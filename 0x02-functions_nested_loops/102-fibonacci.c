@@ -6,18 +6,19 @@
  */
 int main(void)
 {
-	long long int a = 1, b = 2;
-	int c = 0;
+	long int tmp = 0;
+	long int a = 0;
+	long int b = 1;
+	int c = 1;
 
-	while (c < 25)
+	while (c <= 50)
 	{
-		if (c != 24)
-			printf("%llu, %llu, ", a, b);
-		else
-			printf("%llu, %llu\n", a, b);
+		tmp = a;
+		a = b;
+		b += tmp;
+		printf(c < 50 ? "%ld, " : "%ld", b);
 		c++;
-		a += b;
-		b = a + b;
 	}
+	printf("\n");
 	return (0);
 }
