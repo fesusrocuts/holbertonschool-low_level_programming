@@ -92,3 +92,8 @@ void print_line(int n);
 #define _print_diagonal_h
 void print_diagonal(int n);
 #endif
+
+#ifndef _print_square_h
+#define _print_square_h
+void print_square(int size);
+#endif
