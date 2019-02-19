@@ -1,4 +1,6 @@
 #include "holberton.h"
+#include <stdio.h>
+#include <limits.h>
 
 /**
  * _pow - return the result the multiply base ^ exponent
@@ -26,30 +28,15 @@ int _pow(int base, int exp)
  */
 void print_number(int n)
 {
-	int limitSup = 2147483647;
-	int limitInf = -2147483648;
 	int div = 0;
 	int r = 0;
 	int ln = 0;
-	int n1 = 0;
-	int n2 = 0;
-	int fixInt = 0;
-	int flagNeg = 0;
+	int fixInt = n == INT_MIN ? 1 : 0;
+	int n0 = n == INT_MIN ? INT_MAX * -1 : n;
+	int flagNeg = n < 0 ? 1 : 0;
+	int n1 = n0 < 0 ? n0 * -1 : n0; /*take the long, is use to count each digit*/
+	int n2 = n1; /*get the first digit of left and subtract the digit*/
 
-
-	if (n == limitInf)
-	{
-		n = limitSup;
-		fixInt = 1;
-		flagNeg = 1;
-	}
-	else if (n < 0)
-	{
-		n *= -1;
-		flagNeg = 1;
-	}
-	n1 = n; /*take the long, is use to count each digit*/
-	n2 = n; /*get the first digit of left and subtract the digit*/
 	do {
 		n2 = n2 / 10;
 		ln++;
