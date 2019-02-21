@@ -1,16 +1,14 @@
 #include "holberton.h"
 /**
- * _strlen - fn print the long the string
- * @s: get string value
- * return: return integer
+ * _strlen - return the long of the string
+ * @s: get string
+ * Return: integer
  */
 int _strlen(char *s)
 {
 	int l = 0;
 
-	while (*(s + l))
-	{
+	while (s[l])
 		l++;
-	}
 	return (l);
 }

@@ -22,5 +22,9 @@ int main(void)
     str = "";
     len = _strlen(str);
     printf("%d\n", len);
+    
+    str = "SELECT statuses.word_id FROM lang1_words, statuses WHERE statuses.word_id = lang1_words.word_id ORDER BY lang1_words.word ASC";
+    len = _strlen(str);
+    printf("%d\n", len);
     return (0);
 }
