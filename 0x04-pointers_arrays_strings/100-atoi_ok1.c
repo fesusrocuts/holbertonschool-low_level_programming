@@ -34,5 +34,5 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	return (i != 0 ? r * n : 0);
+	return (r * n);
 }
