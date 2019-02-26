@@ -23,7 +23,6 @@ int main(void)
 	printf("%d\n", n);
 	n = _atoi("Suite 402");
 	printf("%d\n", n);
-	printf("%d\n", n);
 	n = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
 	printf("%d\n", n);
 	n = _atoi("-2147483648");

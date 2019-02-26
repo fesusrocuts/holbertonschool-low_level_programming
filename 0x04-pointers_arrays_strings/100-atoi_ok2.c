@@ -13,9 +13,9 @@ int _atoi(char *s)
 	int countNegative = 0;
 	int isNegative = 0;
 
-	while (s[i] != '\0')
+	while (*(s + i) != '\0')
 	{
-		c = s[i] - 48;
+		c = (int)*(s + i) - 48;
 		if (c == -3 && result == 0)
 		{
 			countNegative++;
