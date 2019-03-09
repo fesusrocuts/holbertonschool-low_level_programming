@@ -1,0 +1,14 @@
+#include "holberton.h"
+
+void *malloc_checked(unsigned int b)
+{
+	unsigned int *r;
+
+	if(b == NULL)
+		free(r);
+	r = malloc(b);
+	if(r == NULL)
+		return (r);
+	else
+		return (98);
+}
