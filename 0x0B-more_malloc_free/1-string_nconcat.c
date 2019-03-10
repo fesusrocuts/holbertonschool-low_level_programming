@@ -12,10 +12,13 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *r;
-	int i;
-	int i2;
+	unsigned int i;
+	unsigned int i2;
+	unsigned int ls2;
 
 	r = calloc(n, n * sizeof(char));
+	ls2 = strlen(s2);
+
 
 	for (i = 0; *(s1 + i) != '\0'; i++)
 	{
@@ -23,10 +26,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (i2 = 0; *(s2 + i2) != '\0'; i2++)
 	{
-		*(r + (i2 + i)) = *(s2 + i2);
+		if (ls2 <= n)
+			*(r + (i2 + i)) = *(s2 + i2);
+		else if (i2 <= n)
+			*(r + (i2 + i)) = *(s2 + i2);
 	}
 	if (r == NULL)
-		exit(1);
+		return (NULL);
 	else
 		return (r);
 }
