@@ -12,6 +12,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *r;
+	char comodin = 'F';
 	unsigned int i;
 	unsigned int i2;
 	unsigned int ls1;
@@ -32,8 +33,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		else if (i2 < n)
 			r[i2 + i] = s2[i2];
 		else
-			r[i2 + i] = '\0';
+			/*r[i2 + i] = '\0';*/
+			r[i2 + i] = comodin;
 	}
+	/*r[i2 + i + 1] = '\0';*/
+	printf("i is equal to %d\n", i);
+	printf("i2 is equal to %d\n", i2);
+	printf("n is equal to %d\n", n);
+	printf("i2 + i is equal to %d\n", i2 + i);
+	printf("i2 + i + 1 is equal to %d\n", i2 + i + 1);
+	/*r[i2 + n] = comodin;*/
 
 	if (r == NULL)
 		return (NULL);
