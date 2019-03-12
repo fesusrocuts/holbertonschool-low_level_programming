@@ -28,3 +28,14 @@ struct dog
  */
 void init_dog(struct dog *d, char *name, float age, char *owner);
 #endif
+
+
+#ifndef _PRINT_DOG_H
+#define _PRINT_DOG_H
+/**
+ * print_dog - print the struct dog
+ * @d: struct dog, base to create dog data
+ * Return: void
+ */
+void print_dog(struct dog *d);
+#endif
