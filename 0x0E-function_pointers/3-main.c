@@ -20,12 +20,14 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	/*if (atoi(argv[3]) == 0 && ((int)argv[2] == (int)'/' || (int)argv[2] == (int)'%'))
-	{
-		printf("Error\n");
-		exit(100);
-	}*/
+if (atoi(argv[3]) == 0 &&
+	((strcmp(argv[2], "/") == 0) |
+		(strcmp(argv[2], "%") == 0)))
+{
+	printf("Error\n");
+	exit(100);
+}
 
-	(*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
+	printf("%d\n", (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
