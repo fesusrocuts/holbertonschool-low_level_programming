@@ -2,8 +2,7 @@
 /**
  * free_listint_safe - that prints a listint_t linked list
  * @h: double pointer to head of linked list
- * Description: This function should work for circular lists
- * Return: size of the list or exit(98)
+  * Return: size of the list or exit(98)
  */
 size_t free_listint_safe(listint_t **h)
 {
