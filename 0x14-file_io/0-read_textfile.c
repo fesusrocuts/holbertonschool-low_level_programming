@@ -10,9 +10,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	long int i = 0;
 	int fo;
 	char *buf;
-	int st;
+	long int st;
 
-	buf = malloc(sizeof(size_t) * letters + 1);
+	buf = malloc(sizeof(size_t) * (letters + 1));
 	if (buf == NULL)
 		return (0);
 
@@ -28,13 +28,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buf[letters] = '\0';
 	while (buf[i] != '\0')
-	{
-		/*putchar(buf[i]);*/
 		i++;
-	}
-	st = write(STDIN_FILENO, buf, i);
-	free(buf);
-	if (st != i)
+
+	st = write(1, buf, i);
+	if(st != i || st < 0)
 		return (0);
-	return (i);
+	free(buf);
+	return (st);
 }
