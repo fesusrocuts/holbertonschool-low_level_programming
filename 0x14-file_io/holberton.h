@@ -5,7 +5,7 @@
 /*#define STDIN_FILENO    0*//* Standard input.*/
 /*#define STDOUT_FILENO   1*//* Standard output.*/
 /*#define STDERR_FILENO   2*//* Standard error output.*/
-
+#define BS 1024
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
