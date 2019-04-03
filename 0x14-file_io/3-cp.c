@@ -29,7 +29,7 @@ int main(int ac, char **av)
 	}
 	if (buf != NULL)
 	{
-		while (rc == BS && wc > 0)
+		do
 		{
 			rc = read(op, buf, BS);
 			if (rc == -1)
@@ -46,7 +46,8 @@ int main(int ac, char **av)
 					exit(99);
 				}
 			}
-		}
+		}		
+		while (rc == BS && wc > 0);
 	}
 	cl = close(op);
 	if (cl == -1)
