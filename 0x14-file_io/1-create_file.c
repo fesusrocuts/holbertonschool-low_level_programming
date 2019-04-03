@@ -17,7 +17,6 @@ int create_file(const char *filename, char *text_content)
 	fo = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fo < 0)
 	{
-		write(STDERR_FILENO, "fails create file", 17);
 		return (-1);
 	}
 	if (text_content)
@@ -27,13 +26,11 @@ int create_file(const char *filename, char *text_content)
 		st = write(fo, text_content, i);
 		if (st != i || st < 0)
 		{
-			write(STDERR_FILENO, "fails write in file", 19);
 			return (-1);
 		}
 	}
 	if (close(fo) > 0)
 	{
-		write(STDERR_FILENO, "fails close the file", 20);
 		return (-1);
 	}
 	return (1);
