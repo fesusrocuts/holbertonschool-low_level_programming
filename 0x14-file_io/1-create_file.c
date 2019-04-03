@@ -9,12 +9,10 @@ int create_file(const char *filename, char *text_content)
 {
 	long int i = 0;
 	int fo;
-	long int st;
+	long int st = 0;
 
 	if (filename == NULL)
 		return (-1);
-	if (text_content == NULL)
-		text_content = "";
 
 	fo = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fo < 0)
@@ -22,10 +20,10 @@ int create_file(const char *filename, char *text_content)
 		write(STDERR_FILENO, "fails create file", 17);
 		return (-1);
 	}
-	while (text_content[i] != '\0')
+	while (text_content != NULL && text_content[i] != '\0')
 		i++;
-
-	st = write(fo, text_content, i);
+	if (i > 0)
+		st = write(fo, text_content, i);
 	if (st != i || st < 0)
 	{
 		write(STDERR_FILENO, "fails write in file", 19);
