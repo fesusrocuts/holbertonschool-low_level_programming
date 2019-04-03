@@ -20,14 +20,16 @@ int create_file(const char *filename, char *text_content)
 		write(STDERR_FILENO, "fails create file", 17);
 		return (-1);
 	}
-	while (text_content != NULL && text_content[i] != '\0')
-		i++;
-	if (i > 0)
-		st = write(fo, text_content, i);
-	if (st != i || st < 0)
+	if (text_content)
 	{
-		write(STDERR_FILENO, "fails write in file", 19);
-		return (-1);
+		while (text_content[i] != '\0')
+			i++;
+		st = write(fo, text_content, i);
+		if (st != i || st < 0)
+		{
+			write(STDERR_FILENO, "fails write in file", 19);
+			return (-1);
+		}
 	}
 	if (close(fo) > 0)
 	{
