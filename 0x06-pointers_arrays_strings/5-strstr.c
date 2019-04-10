@@ -11,9 +11,7 @@ char *_strstr(char *haystack, char *needle)
 
   i = 0, j = 0, m = 0, si = 0, ncz = 0;
   while (needle[ncz] != '\0')
-  {
     ncz++;
-  }
   while (needle[i] != '\0')
   {
     while (haystack[j] != '\0')
@@ -22,7 +20,9 @@ char *_strstr(char *haystack, char *needle)
       {
         m += 1;
         if (i == 0)
+        {
           si = j;
+        }
       }
       j++;
     }
