@@ -1,4 +1,3 @@
 #!/bin/bash
-gcc -c -Wall -Werror -fpic *.c
-gcc -shared -o liball.so *.o
-export LD_PRELOAD=liball.so
+gcc -g -fPIC -Wall -Werror -Wextra -pedantic *.c -shared -o /tmp/liball.so
+export LD_PRELOAD=/tmp/liball.so
